@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Questions</title>
+    <link href="semantic/dist/semantic.min.css" rel="stylesheet" type=
+    "text/css">
+    <script src="semantic/dist/semantic.min.js">
+    </script>
+</head>
+<body>
+    <header>
+        <div></div>
+    </header>
+    <main>
+        <div class="ui internally celled grid">
+            <div class="thirty wide column">
+                <h1>Game of Questions</h1>
+                <div class="ui three column grid">
+                    <div class="ui six wide column">
+						<h2><i class="users icon"></i>Online Users </h2>
+                        <ul id="usernameList" class ="ui list"></ul>
+						<form id="usernameInput">
+                            <i class="add user icon"></i>
+							<label> Enter your username to join the game : 
+							</label>
+							<input id="username" type="text" autocomplete="off">
+							<input class = "ui button" type="submit" value="Submit" >
+						</form>						
+                    </div>
+                    <div class="ui six wide column" id ="questionContent" style="display:none;">
+                        <h2>Play the Game (Click on Request Question to
+                        Start)</h2><ul id="outputQandId"></ul>
+                        <div class="ui form">
+                            <div class="five wide field inputAnswer">
+                                <div class='requestQ'>
+                                    <button class="ui small black button">Request Question
+                                    </button>
+                                </div>
+                                <p><span style="color:red">Enter
+                                Answer:</span></p>
+                                <input placeholder="Enter Answer" type="text">                             
+                                <button class=
+                                "ui large green button">Submit</button>
+                            </div>
+							<ul id='outputResult'></ul>
+						</div>
+					</div>
+                    <div class="ui three wide column" id = "scoreContent" style="display:none;">
+                        <h2>Other Actions</h2>
+                        <div class='requestScore'>
+							<p>Current Score: </p>
+							<ul id='outputScore'></ul>
+						</div>
+                        <div class='resetScore'>
+                            <button class="negative ui button">RESET
+                            Score</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+	<script src="/socket.io/socket.io.js">
+	</script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js">
+    </script>
+    <script src="javascripts/app.js">
+    </script>
+</body>
+</html>
